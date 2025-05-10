@@ -1,19 +1,23 @@
+
 import React from "react";
+import toast from "react-hot-toast";
 
 function ClipboardButton() {
-  const copyToClipboard = () => {
-    const lipsumElement = document.getElementById("lipsum-text");
-    if (!lipsumElement) return;
-
-    const text = lipsumElement.innerText;
-    navigator.clipboard
-      .writeText(text)
-      .then(() => alert("Copied to clipboard!"))
-      .catch((err) => console.error("Failed to copy: ", err));
+  const handleCopy = () => {
+    const text = document.getElementById("lipsum-text")?.innerText;
+    if (text) {
+      navigator.clipboard.writeText(text).then(() => {
+        toast.success("Copied to clipboard!");
+      }).catch(() => {
+        toast.error("Failed to copy.");
+      });
+    } else {
+      toast("Nothing to copy!", { icon: "🤔" });
+    }
   };
 
   return (
-    <button className="happy-button" onClick={copyToClipboard}>
+    <button className="happy-button" onClick={handleCopy}>
       Copy Bob Ross Ipsum
     </button>
   );
