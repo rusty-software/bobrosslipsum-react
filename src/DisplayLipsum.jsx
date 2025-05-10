@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect } from "react";
 
 const quotes = [
@@ -32,11 +33,17 @@ function DisplayLipsum({ numParagraphs, numSentences, refreshCount }) {
     const shuffledQuotes = shuffle([...new Set(quotes)]);
     const newParagraphs = [];
 
+    let index = 0;
+
     for (let i = 0; i < numParagraphs; i++) {
-      const start = i * numSentences;
-      const end = start + numSentences;
-      const group = shuffledQuotes.slice(start, end);
-      newParagraphs.push(group);
+      const paragraph = [];
+
+      while (paragraph.length < numSentences && index < shuffledQuotes.length) {
+        paragraph.push(shuffledQuotes[index]);
+        index++;
+      }
+
+      newParagraphs.push(paragraph);
     }
 
     setParagraphs(newParagraphs);
