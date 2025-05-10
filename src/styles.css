@@ -1,0 +1,43 @@
+
+/* Bob Ross Inspired Styles */
+
+body {
+  background-color: #f4f1ee; /* soft paper tone */
+  font-family: 'Raleway', Arial, sans-serif;
+  color: #333;
+}
+
+.w3-green {
+  background-color: #5a7d5a !important; /* forest green */
+}
+
+h2.w3-text-green {
+  color: #5a7d5a !important;
+}
+
+button.w3-green:hover {
+  background-color: #6c926c !important;
+}
+
+a {
+  color: #2c5d63;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+input[type="text"], input[type="number"] {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+p {
+  line-height: 1.6;
+}
+
+hr {
+  border-top: 1px solid #ccc;
+  margin: 2em 0;
+}
