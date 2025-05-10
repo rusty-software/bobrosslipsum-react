@@ -8,54 +8,38 @@ function Sidebar({
   onRegenerate,
 }) {
   return (
-    <nav className="sidebar" id="inputs" style={{ zIndex: 3, width: "260px" }}>
-      <div className="w3-container w3-display-container w3-padding-16">
-        <h3>Happy Lipsum!</h3>
-        <hr />
-        <p>
-          <label>Number of Paragraphs</label>
-          <input
-            type="number"
-            value={numParagraphs}
-            onChange={(e) => setNumParagraphs(parseInt(e.target.value) || 0)}
-            className="w3-input"
-          />
-        </p>
-        <p>
-          <label>Number of Sentences</label>
-          <input
-            type="number"
-            value={numSentences}
-            onChange={(e) => setNumSentences(parseInt(e.target.value) || 0)}
-            className="w3-input"
-          />
-        </p>
-        <p>
-          <button
-            className="w3-button w3-block w3-green"
-            onClick={onRegenerate}
-          >
-            Let's Get Crazy
-          </button>
-        </p>
-      </div>
+    <nav className="sidebar">
+      <h2>Happy Lipsum!</h2>
+      <hr />
 
-      <div className="w3-bar-block">
-        <a className="w3-bar-item w3-button w3-padding-16" href="#home-top">
-          <i className="fa fa-home"></i> Home
-        </a>
-        <a className="w3-bar-item w3-button w3-padding-16" href="#instructions">
-          <i className="fa fa-info-circle"></i> Instructions
-        </a>
-        <a className="w3-bar-item w3-button w3-padding-16" href="#sample">
-          <i className="fa fa-paint-brush"></i> Sample
-        </a>
-        <a className="w3-bar-item w3-button w3-padding-16" href="#about">
-          <i className="fa fa-user"></i> About
-        </a>
-        <a className="w3-bar-item w3-button w3-padding-16" href="#contact">
-          <i className="fa fa-envelope"></i> Contact
-        </a>
+      <label>
+        Number of Paragraphs
+        <input
+          type="number"
+          value={numParagraphs}
+          onChange={(e) => setNumParagraphs(e.target.value)}
+        />
+      </label>
+
+      <label>
+        Number of Sentences
+        <input
+          type="number"
+          value={numSentences}
+          onChange={(e) => setNumSentences(e.target.value)}
+        />
+      </label>
+
+      <button className="happy-button" onClick={onRegenerate}>
+        Let's Get Crazy
+      </button>
+
+      <div style={{ marginTop: "2rem" }}>
+        <a href="#home-top">Home</a>
+        <a href="#instructions">Instructions</a>
+        <a href="#sample">Sample</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
       </div>
     </nav>
   );

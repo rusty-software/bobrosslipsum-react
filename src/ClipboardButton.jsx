@@ -13,7 +13,7 @@ function ClipboardButton() {
   };
 
   return (
-    <button className="w3-button w3-green" onClick={copyToClipboard}>
+    <button className="happy-button" onClick={copyToClipboard}>
       Copy Bob Ross Ipsum
     </button>
   );
