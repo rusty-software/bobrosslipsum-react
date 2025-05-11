@@ -1,12 +1,15 @@
-# React + Vite
+# overview
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Originally, this site was written in clojurescript. However, I never managed to keep it up to date, and the tooling got to a point where I would have to re-implement (or re-learn) a fair amount just to add new quotes.
 
-Currently, two official plugins are available:
+Instead of doing that, and since it's currently trendy, I decided to vibe code my way into a reimplementation of this site using react and ChatGPT. The results seem to have turned out alright, although I really haven't checked any of the work critically.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+There was a rough spot where the AI fundamentally broke the styling and couldn't figure out how to get it back to a good state. I'm slightly ashamed to admit that I was swearing at it, and while it responded to my frustration, it also reacted... ?positively?, and started swearing in it's replies, like it was excited to talk to me like that. Good times!
 
-## Expanding the ESLint configuration
+# essential commands
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- run the local dev server: `npm run dev`
+- build the site: `npm run build`
+- deploy the built site: `npm run deploy`
+
+TODO: add more things that I'm likely to forget
