@@ -29,11 +29,11 @@ function About() {
         github link if you want to see how it's implemented. Happy coding!
       </p>
       <a
-        href="https://github.com/rusty-software/bobrosslipsum"
+        href="https://github.com/rusty-software/bobrosslipsum-react"
         target="_blank"
         rel="noreferrer"
       >
-        https://github.com/rusty-software/bobrosslipsum
+        https://github.com/rusty-software/bobrosslipsum-react
       </a>
     </div>
   );
